@@ -161,4 +161,4 @@ AI was most useful when it explained why something worked or failed instead of s
 ## Author
  
 - GitHub - [@qcyrus8j562z1111](https://github.com/qcyrus8j562z1111)
-- Frontend Mentor - [Add your Frontend Mentor profile here]
+- Frontend Mentor - https://www.frontendmentor.io/profile/qcyrus8j562z1111
