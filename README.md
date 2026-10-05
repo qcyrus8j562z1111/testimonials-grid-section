@@ -1,104 +1,164 @@
-# Frontend Mentor - Testimonials grid section
+# Frontend Mentor - Testimonials Grid Section Solution
+ 
+This is my solution to the [Testimonials Grid Section challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/testimonials-grid-section-Nnw6J7Un7).
+ 
+This project focused on building a responsive testimonial layout using semantic HTML, CSS Grid, Flexbox, reusable CSS custom properties, and a mobile-first workflow.
+ 
+## Table of Contents
+ 
+- #overview
+- #the-challenge
+- #screenshot
+- #links
+- #my-process
+- #built-with
+- #what-i-learned
+- #continued-development
+- #ai-collaboration
+- #author
+ 
+## Overview
+ 
+### The Challenge
+ 
+Users should be able to:
+ 
+- View the optimal layout depending on their device's screen size
+- See the testimonial cards arranged in a single-column layout on smaller screens
+- See the testimonial cards arranged in a multi-column CSS Grid layout on larger screens
+ 
+### Screenshot
+ 
+.![Desktop](image.png)
+ 
+![Mobile](<Screenshot 2026-10-05 111046.png>)
 
-![Design preview for the Testimonials grid section coding challenge](./preview.jpg)
-
-## Welcome! 👋
-
-Thanks for checking out this front-end coding challenge.
-
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
-
-**To do this challenge, you need a basic understanding of HTML and CSS.**
-
-## The challenge
-
-Your challenge is to build out this testimonials grid section and get it looking as close to the design as possible.
-
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
-
-Your users should be able to:
-
-- View the optimal layout for the site depending on their device's screen size
-
-### Want some support on the challenge? 
-
-[Join our community](https://www.frontendmentor.io/community) and ask questions in the **#help** channel.
-
-## Where to find everything
-
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design. 
-
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. 
-
-If you would like the Figma design file to gain experience using professional tools and build more accurate projects faster, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
-
-You will find all the required assets in the `/images` folder. The assets are already optimized.
-
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
-
-## Using AI coding assistants
-
-We've included two files to help you if you're using AI coding assistants (like Claude, GitHub Copilot, Cursor, etc.) while working on this challenge:
-
-- `AGENTS.md` - Contains detailed instructions for AI assistants on how to help you with this challenge. It's tailored to this challenge's difficulty level, so the AI will provide guidance appropriate to your learning stage—offering more support for beginner challenges and encouraging more independence on advanced ones.
-- `CLAUDE.md` - A pointer file that directs Claude-based tools to the AGENTS.md instructions.
-
-**How to use them:** You don't need to do anything! These files are automatically detected by most AI coding tools. The AI will read them and adjust its behavior to be a better learning partner—guiding you toward solutions rather than just giving you the answers.
-
-**Note:** These files are designed to help you *learn*, not to do the work for you. The AI is instructed to ask questions, give hints, and explain concepts rather than writing complete solutions.
-
-## Building your project
-
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
-
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
-
-## Deploying your project
-
-As mentioned above, there are many ways to host your project for free. Our recommended hosts are:
-
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
-
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://www.frontendmentor.io/guides/hosting-your-solution).
-
-## Create a custom `README.md`
-
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
-
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
-
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
-
-## Submitting your solution
-
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://www.frontendmentor.io/guides/how-to-submit-solutions) for tips on how to do this.
-
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
-
-## Sharing your solution
-
-There are multiple places you can share your solution:
-
-1. Share your solution page in the **#finished-projects** channel of the [community](https://www.frontendmentor.io/community). 
-2. Share on [X (formerly Twitter)](https://x.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in your post. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on [LinkedIn](https://www.linkedin.com/company/frontend-mentor/).
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
-
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
-
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
-
-## Got feedback for us?
-
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
-
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
-
-**Have fun building!** 🚀
+![Mobile](<Screenshot 2026-10-05 111200.png>)
+### Links
+ 
+- Solution URL: [Add Frontend Mentor solution URL here]
+- Live Site URL: https://qcyrus8j562z1111.github.io/testimonials-grid-section/
+ 
+## My Process
+ 
+### Built With
+ 
+- Semantic HTML5
+- CSS custom properties
+- CSS logical properties
+- Flexbox
+- CSS Grid
+- Mobile-first workflow
+- Responsive media queries
+- Reusable spacing and color design tokens
+ 
+### What I Learned
+ 
+One of the biggest lessons from this project was understanding when to use Grid and when to use Flexbox.
+ 
+Flexbox worked well for the smaller one-dimensional profile layout:
+ 
+```css
+.profile {
+display: flex;
+align-items: center;
+gap: var(--space-sm);
+}
+```
+ 
+CSS Grid handled the overall testimonial layout because the desktop design required control over both rows and columns.
+ 
+```css
+.testimonials-grid {
+display: grid;
+gap: var(--space-md);
+}
+```
+ 
+At the desktop breakpoint, I changed the layout into four columns:
+ 
+```css
+@media (min-width: 75rem) {
+.testimonials-grid {
+grid-template-columns: repeat(4, 1fr);
+max-width: 69.5rem;
+margin-inline: auto;
+padding-inline: 0;
+}
+}
+```
+ 
+I also learned how individual Grid items can span multiple columns and rows.
+ 
+For example, Daniel's testimonial spans two columns:
+ 
+```css
+.testimonial-daniel {
+grid-column: 1 / 3;
+grid-row: 1;
+}
+```
+ 
+Kira's testimonial occupies one column but spans both rows:
+ 
+```css
+.testimonial-kira {
+grid-column: 4;
+grid-row: 1 / 3;
+}
+```
+ 
+Another important lesson was separating shared styles from card-specific styles. The `.testimonial` class handles styling shared by every card, while classes such as `.testimonial-daniel` handle only the differences between individual cards.
+ 
+I also carried feedback from a previous project into this solution by using CSS logical properties and reusable custom properties.
+ 
+```css
+:root {
+--space-sm: 1rem;
+--space-md: 1.5rem;
+--space-lg: 2rem;
+--radius-card: 0.625rem;
+}
+```
+ 
+Instead of repeating values throughout the stylesheet, these variables make the design system easier to understand and maintain.
+ 
+### Continued Development
+ 
+I want to continue improving my understanding of CSS Grid, especially grid placement, responsive layouts, and deciding when Grid or Flexbox is the better tool.
+ 
+I also want to continue improving how I structure CSS before writing it. This project reinforced the value of separating:
+ 
+- Shared component styles
+- Component-specific styles
+- Mobile-first base styles
+- Desktop-specific layout styles
+ 
+I plan to continue using meaningful Git commits throughout future projects instead of waiting until the project is finished to commit everything at once.
+ 
+I also want to continue applying feedback from previous projects to new ones, particularly around CSS logical properties, reusable design tokens, responsive design, and maintainable CSS.
+ 
+### AI Collaboration
+ 
+I used Microsoft Copilot as a learning and development assistant throughout this project.
+ 
+Rather than using AI to generate the finished project, I used it primarily to help me reason through the development process. This included:
+ 
+- Reviewing semantic HTML structure
+- Understanding reusable CSS classes
+- Debugging selector and class-name issues
+- Understanding the difference between Grid and Flexbox
+- Learning how Grid items span rows and column[Add live site URL here]s
+- Comparing my implementation with the supplied reference designs
+- Reviewing responsive behavior at different viewport widths
+- Applying feedback from previous projects
+- Maintaining a professional Git workflow with meaningful commits
+ 
+An important part of the process was working through problems myself before relying on a finished answer. There were frustrating moments, especially when debugging CSS selectors and responsive layout behavior, but working through those problems helped reinforce the concepts.
+ 
+AI was most useful when it explained why something worked or failed instead of simply providing replacement code.
+ 
+## Author
+ 
+- GitHub - [@qcyrus8j562z1111](https://github.com/qcyrus8j562z1111)
+- Frontend Mentor - [Add your Frontend Mentor profile here]
