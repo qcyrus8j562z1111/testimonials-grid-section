@@ -152,7 +152,7 @@ body {
 }
 
 /* Desktop Layout */
-@media(min-width: 64rem) {
+@media(min-width: 75rem) {
     body {
         min-height: 100vh;
         display: grid;
