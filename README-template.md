@@ -1,121 +1,164 @@
-# Frontend Mentor - Testimonials grid section solution
-
-This is a solution to the [Testimonials grid section challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/testimonials-grid-section-Nnw6J7Un7). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
-
-## Table of contents
-
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-  - [AI Collaboration](#ai-collaboration)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
+# Frontend Mentor - Testimonials Grid Section Solution
+ 
+This is my solution to the [Testimonials Grid Section challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/testimonials-grid-section-Nnw6J7Un7).
+ 
+This project focused on building a responsive testimonial layout using semantic HTML, CSS Grid, Flexbox, reusable CSS custom properties, and a mobile-first workflow.
+ 
+## Table of Contents
+ 
+- #overview
+- #the-challenge
+- #screenshot
+- #links
+- #my-process
+- #built-with
+- #what-i-learned
+- #continued-development
+- #ai-collaboration
+- #author
+ 
 ## Overview
-
-### The challenge
-
+ 
+### The Challenge
+ 
 Users should be able to:
-
-- View the optimal layout for the site depending on their device's screen size
-
+ 
+- View the optimal layout depending on their device's screen size
+- See the testimonial cards arranged in a single-column layout on smaller screens
+- See the testimonial cards arranged in a multi-column CSS Grid layout on larger screens
+ 
 ### Screenshot
+ 
+.![Desktop](image.png)
+ 
+![Mobile](<Screenshot 2026-10-05 111046.png>)
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
-
+![Mobile](<Screenshot 2026-10-05 111200.png>)
 ### Links
-
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
-
-## My process
-
-### Built with
-
-- Semantic HTML5 markup
+ 
+- Solution URL: [Add Frontend Mentor solution URL here]
+- Live Site URL: https://qcyrus8j562z1111.github.io/testimonials-grid-section/
+ 
+## My Process
+ 
+### Built With
+ 
+- Semantic HTML5
 - CSS custom properties
+- CSS logical properties
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
-
-### What I learned
-
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
+- Responsive media queries
+- Reusable spacing and color design tokens
+ 
+### What I Learned
+ 
+One of the biggest lessons from this project was understanding when to use Grid and when to use Flexbox.
+ 
+Flexbox worked well for the smaller one-dimensional profile layout:
+ 
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+.profile {
+display: flex;
+align-items: center;
+gap: var(--space-sm);
 }
 ```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+ 
+CSS Grid handled the overall testimonial layout because the desktop design required control over both rows and columns.
+ 
+```css
+.testimonials-grid {
+display: grid;
+gap: var(--space-md);
 }
 ```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
-
-### Continued development
-
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
-
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
-
+ 
+At the desktop breakpoint, I changed the layout into four columns:
+ 
+```css
+@media (min-width: 75rem) {
+.testimonials-grid {
+grid-template-columns: repeat(4, 1fr);
+max-width: 69.5rem;
+margin-inline: auto;
+padding-inline: 0;
+}
+}
+```
+ 
+I also learned how individual Grid items can span multiple columns and rows.
+ 
+For example, Daniel's testimonial spans two columns:
+ 
+```css
+.testimonial-daniel {
+grid-column: 1 / 3;
+grid-row: 1;
+}
+```
+ 
+Kira's testimonial occupies one column but spans both rows:
+ 
+```css
+.testimonial-kira {
+grid-column: 4;
+grid-row: 1 / 3;
+}
+```
+ 
+Another important lesson was separating shared styles from card-specific styles. The `.testimonial` class handles styling shared by every card, while classes such as `.testimonial-daniel` handle only the differences between individual cards.
+ 
+I also carried feedback from a previous project into this solution by using CSS logical properties and reusable custom properties.
+ 
+```css
+:root {
+--space-sm: 1rem;
+--space-md: 1.5rem;
+--space-lg: 2rem;
+--radius-card: 0.625rem;
+}
+```
+ 
+Instead of repeating values throughout the stylesheet, these variables make the design system easier to understand and maintain.
+ 
+### Continued Development
+ 
+I want to continue improving my understanding of CSS Grid, especially grid placement, responsive layouts, and deciding when Grid or Flexbox is the better tool.
+ 
+I also want to continue improving how I structure CSS before writing it. This project reinforced the value of separating:
+ 
+- Shared component styles
+- Component-specific styles
+- Mobile-first base styles
+- Desktop-specific layout styles
+ 
+I plan to continue using meaningful Git commits throughout future projects instead of waiting until the project is finished to commit everything at once.
+ 
+I also want to continue applying feedback from previous projects to new ones, particularly around CSS logical properties, reusable design tokens, responsive design, and maintainable CSS.
+ 
 ### AI Collaboration
-
-Describe how you used AI tools (if any) during this project. This helps demonstrate your ability to work effectively with AI assistants.
-
-- What tools did you use (e.g., ChatGPT, Claude, GitHub Copilot)?
-- How did you use them (e.g., debugging, generating boilerplate, brainstorming solutions)?
-- What worked well? What didn't?
-
-**Note: Delete this note and the content above if you didn't use AI, or replace with your own experience.**
-
+ 
+I used Microsoft Copilot as a learning and development assistant throughout this project.
+ 
+Rather than using AI to generate the finished project, I used it primarily to help me reason through the development process. This included:
+ 
+- Reviewing semantic HTML structure
+- Understanding reusable CSS classes
+- Debugging selector and class-name issues
+- Understanding the difference between Grid and Flexbox
+- Learning how Grid items span rows and column[Add live site URL here]s
+- Comparing my implementation with the supplied reference designs
+- Reviewing responsive behavior at different viewport widths
+- Applying feedback from previous projects
+- Maintaining a professional Git workflow with meaningful commits
+ 
+An important part of the process was working through problems myself before relying on a finished answer. There were frustrating moments, especially when debugging CSS selectors and responsive layout behavior, but working through those problems helped reinforce the concepts.
+ 
+AI was most useful when it explained why something worked or failed instead of simply providing replacement code.
+ 
 ## Author
-
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+ 
+- GitHub - [@qcyrus8j562z1111](https://github.com/qcyrus8j562z1111)
+- Frontend Mentor - [Add your Frontend Mentor profile here]
