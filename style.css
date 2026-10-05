@@ -16,6 +16,14 @@
     --color-grey-500: hsl(217, 19%, 35%);
     --color-dark-blue: hsl(219, 29%, 14%);
     --color-black: hsl(0, 0%, 7%);
+
+    /* Spacing */
+    --space-sm: 1rem;
+    --space-md: 1.5rem;
+    --space-lg: 2rem;
+
+    /* Border Radius */
+    --radius-card: 0.625rem;
 }
 
 /*CSS Reset*/
@@ -41,18 +49,17 @@ body {
 /* Testimonials Container*/
 .testimonials-grid {
     display: grid;
-    padding-inline: 1.5rem;
-    gap: 1.5rem;
-    
+    padding-inline: var(--space-md);
+    gap: var(--space-md);
 }
 
 /*Testimonials Cards */
 .testimonial {
     display: grid;
-    gap: 1.5rem;
-    border-radius: 10px;
-    padding: 2rem;
-    box-shadow: 2.5rem 3.75rem 3rem -3rem rgba(72, 85, 106, 0.25);
+    gap: var(--space-md);
+    border-radius: var(--radius-card);
+    padding: var(--space-lg);
+    box-shadow: 2.5rem 3.75rem 3rem -3rem rgba(72,85,106,0.25);
 }
 
 /* Daniel Testimonial */
@@ -124,7 +131,7 @@ body {
 .profile {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: var(--space-sm);
 }
 
 .profile-info {
